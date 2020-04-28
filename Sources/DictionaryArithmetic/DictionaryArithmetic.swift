@@ -1,16 +1,14 @@
-infix operator .+ : AdditionPrecedence
-infix operator .+= : AssignmentPrecedence
-
-infix operator .- : AdditionPrecedence
-infix operator .-= : AssignmentPrecedence
-
-infix operator .* : MultiplicationPrecedence
-infix operator .*= : AssignmentPrecedence
-
-infix operator ./ : MultiplicationPrecedence
-infix operator ./= : AssignmentPrecedence
-
 import Numerics
+
+infix operator .+ : AdditionPrecedence
+infix operator .- : AdditionPrecedence
+infix operator .* : MultiplicationPrecedence
+infix operator ./ : MultiplicationPrecedence
+
+infix operator .+= : AssignmentPrecedence
+infix operator .-= : AssignmentPrecedence
+infix operator .*= : AssignmentPrecedence
+infix operator ./= : AssignmentPrecedence
 
 extension Dictionary {
     @inlinable public static func + (l: Self, r: Self) -> Self { l.merging(r){ _, last in last } }
